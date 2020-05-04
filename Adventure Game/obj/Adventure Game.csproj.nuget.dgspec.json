@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rebelde\\source\\repos\\Adventure Game\\Adventure Game\\Adventure Game.csproj": {}
+    "C:\\Users\\Rebelde\\source\\repos\\Adventure Game\\WTLZPJC-AdventureGame\\Adventure Game\\Adventure Game.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rebelde\\source\\repos\\Adventure Game\\Adventure Game\\Adventure Game.csproj": {
+    "C:\\Users\\Rebelde\\source\\repos\\Adventure Game\\WTLZPJC-AdventureGame\\Adventure Game\\Adventure Game.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rebelde\\source\\repos\\Adventure Game\\Adventure Game\\Adventure Game.csproj",
+        "projectUniqueName": "C:\\Users\\Rebelde\\source\\repos\\Adventure Game\\WTLZPJC-AdventureGame\\Adventure Game\\Adventure Game.csproj",
         "projectName": "Adventure Game",
-        "projectPath": "C:\\Users\\Rebelde\\source\\repos\\Adventure Game\\Adventure Game\\Adventure Game.csproj",
+        "projectPath": "C:\\Users\\Rebelde\\source\\repos\\Adventure Game\\WTLZPJC-AdventureGame\\Adventure Game\\Adventure Game.csproj",
         "packagesPath": "C:\\Users\\Rebelde\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rebelde\\source\\repos\\Adventure Game\\Adventure Game\\obj\\",
+        "outputPath": "C:\\Users\\Rebelde\\source\\repos\\Adventure Game\\WTLZPJC-AdventureGame\\Adventure Game\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -41,6 +41,22 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
