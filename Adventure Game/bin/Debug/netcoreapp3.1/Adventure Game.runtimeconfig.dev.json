@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\Rebelde\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Rebelde\\.nuget\\packages",
+      "C:\\Users\\trapa\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\trapa\\.nuget\\packages",
       "C:\\Microsoft\\Xamarin\\NuGet"
     ]
   }
