@@ -16,9 +16,9 @@ namespace Adventure_Game.Controllers
         {
             _context = context;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            return View(await _context.Screens.ToListAsync());
         }
 
         //public async Task<IActionResult> Index()
@@ -30,12 +30,37 @@ namespace Adventure_Game.Controllers
         {
             return View(await _context.Screens.ToListAsync());
         }
-        public IActionResult Create(Screen screen)
+        public async Task<IActionResult> Details(int? id)
         {
-            _context.Add(screen);
-            _context.SaveChanges();
-            ViewBag.message = screen.Name + " has been created";
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var enemy = await _context.Screens
+                .FirstOrDefaultAsync(m => m.ScreenId == id);
+            if (enemy == null)
+            {
+                return NotFound();
+            }
+
+            return View(enemy);
+        }
+        public IActionResult Create()
+        {
             return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("ScreenId,Name,Description")]Screen screen)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(screen);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(screen);
         }
     }
 }

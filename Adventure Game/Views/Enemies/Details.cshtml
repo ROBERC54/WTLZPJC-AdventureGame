@@ -1,0 +1,60 @@
+﻿@model Adventure_Game.Models.Enemy
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Enemy</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HP)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HP)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Multiplier)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Multiplier)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Dice)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Dice)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Modifier)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Modifier)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Exp)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Exp)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.EnemyId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
