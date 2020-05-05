@@ -34,6 +34,7 @@ namespace Adventure_Game.Controllers
         {
             _context.Add(screen);
             _context.SaveChanges();
+            ViewBag.message = screen.Name + " has been created";
             return View();
         }
     }
