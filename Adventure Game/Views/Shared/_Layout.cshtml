@@ -38,6 +38,9 @@
             </div>
         </nav>
     </header>
+    <div>
+        @await Component.InvokeAsync("UserDataDisplay")
+    </div>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
