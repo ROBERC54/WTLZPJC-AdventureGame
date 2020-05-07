@@ -14,10 +14,11 @@ namespace Adventure_Game.Components
         {
             _context = context;
         }
-        public IViewComponentResult Invoke()
+        public IViewComponentResult Invoke(Screen screen)
         {
 
-            return View(_context);
+            return View(_context.AccessPoints
+                .Where(x => x.From==screen.ScreenId));
 
         }
     }

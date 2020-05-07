@@ -1,15 +1,11 @@
-﻿@model IEnumerable<string>
-<a class="btn btn-block btn-secondary"
-   asp-action="Details"
-   asp-controller="Screen">
-    Details
-</a>
-@foreach (string category in Model)
+﻿@model IEnumerable<Adventure_Game.Models.AccessPoint>
+
+@foreach (var accessPoint in Model)
 {
-    <a class="btn btn-block
-       @(category == ViewBag.SelectedCategory ? "btn-primary": "btn-secondary")"
+    <a class="btn btn-block btn-dark"
        asp-action="Details"
-       asp-controller="Screen">
-        @category
+       asp-controller="Screen"
+       asp-route-id="@accessPoint.To">
+        @accessPoint.Description
     </a>
 }
