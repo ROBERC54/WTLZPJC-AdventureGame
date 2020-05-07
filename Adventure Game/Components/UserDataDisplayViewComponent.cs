@@ -14,20 +14,10 @@ namespace Adventure_Game.Components
         {
             _context = context;
         }
-        public string Invoke()
-        {
-            return "UserDataDisplay will manifest here:" +
-                "\nUserId:" +
-                "\nName:" +
-                "\nScreen:" +
-                "\nLevel:" +
-                "\nExp:" +
-                "\nHP:";
-        }
-        public IViewComponentResult InvokeusethisinplaceofInvokelater()//will replace Invoke()
+        public IViewComponentResult Invoke()//will replace Invoke()
         {
 
-            return View(_context);
+            return View(_context.Users);
 
         }
     }
