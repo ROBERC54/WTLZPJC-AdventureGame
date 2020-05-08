@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Adventure_Game.Models.ScreenItem>
+
+@foreach (var screenItem in Model)
+{
+
+    @if (screenItem.IsTaken == 1)
+    {
+        <a class="btn btn-block btn-danger">
+            @screenItem.TakenDescription
+        </a>
+    }
+    else
+    {
+        <a class="btn btn-block btn-danger"
+           asp-action="Details"
+           asp-controller="Screen"
+           asp-route-id="@screenItem.ScreenId">
+            @screenItem.Description
+        </a>
+    }
+}
+
+

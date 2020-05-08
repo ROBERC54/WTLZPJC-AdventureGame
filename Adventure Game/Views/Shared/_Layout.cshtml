@@ -36,6 +36,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Index">Users</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ScreenItem" asp-action="Index">ScreenItems</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -44,6 +47,11 @@
     <div>
         @await Component.InvokeAsync("UserDataDisplay")
     </div>
+    <div>
+       
+
+    </div>
+        
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()

@@ -23,8 +23,13 @@
     </dl>
 </div>
 <div>
+    @await  Component.InvokeAsync("TakableItems", Model)
+</div>
+
+<div>
     @await  Component.InvokeAsync("NavChoice", Model)
 </div>
+
 
 <div>
     <a asp-action="Index">Back To List</a>

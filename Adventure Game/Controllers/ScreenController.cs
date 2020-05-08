@@ -30,6 +30,7 @@ namespace Adventure_Game.Controllers
         {
             return View(await _context.Screens.ToListAsync());
         }
+
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -45,6 +46,11 @@ namespace Adventure_Game.Controllers
             }
 
             return View(enemy);
+        }
+
+        public async Task<IActionResult> TakeItem(int? id)
+        {
+            return Details(id);
         }
         public IActionResult Create()
         {

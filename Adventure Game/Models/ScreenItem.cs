@@ -15,6 +15,7 @@ namespace Adventure_Game.Models
         public string Description { get; set; }
         public string TakenDescription { get; set; }
         public string Action { get; set; }
+        public int IsTaken { get; set; }
 
     }
 }
